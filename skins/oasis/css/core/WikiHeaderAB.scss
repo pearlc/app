@@ -2,12 +2,13 @@
 
 $header-color-primary: $color-links;
 $header-color-secondary: $color-page;
+$header-z-index: 3900000;
 
 .WikiHeaderV2 {
 	background: $header-color-secondary;
 	height: 60px;
 	position: relative;
-	z-index: 2;
+	z-index: $header-z-index;
 
 	.local-navigation-container {
 		width: 1040px;
