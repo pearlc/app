@@ -27,6 +27,7 @@ $(function () {
 			seeAllText = (noOfItems > 2) ? ('See all in ' + $seeAll.text()) : 'See all',
 			$columns = $(),
 			$columnUl,
+			columnsCount = 0,
 			i = 0;
 
 		window.temp = $subNav;
@@ -50,14 +51,13 @@ $(function () {
 			$this.addClass('no-see-all');
 		}
 
-		for (i = 0; i < 4; i++) {
-			if ($items.length > i) {
-				$columnUl = $('<ul class="subnav-2-column">');
-				$columnUl.append($items.get(i));
-				$columnUl.append($items.get(i + 4));
+		columnsCount = Math.min(4, $items.length);
+		for (i = 0; i < columnsCount; i++) {
+			$columnUl = $('<ul class="subnav-2-column">');
+			$columnUl.append($items.get(i));
+			$columnUl.append($items.get(i + 4));
 
-				$columns = $columns.add($('<li>').append($columnUl));
-			}
+			$columns = $columns.add($('<li>').append($columnUl));
 		}
 		$subNav.append($columns);
 	});
