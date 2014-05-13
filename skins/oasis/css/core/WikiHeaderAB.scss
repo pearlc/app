@@ -264,6 +264,7 @@
 }
 
 // colors
+/*
 $header-color-primary: $color-links;
 $header-color-secondary: $color-page;
 
@@ -315,3 +316,43 @@ $header-color-secondary: $color-page;
 		}
 	}
 }
+*/
+
+//////////////// COMPILED
+/*
+.WikiHeaderV2 {
+  background: $header-color-secondary;
+}
+.WikiHeaderV2 .wordmark.text a {
+  color: $header-color-primary;
+}
+
+.WikiNavV2 .nav-item > a {
+  background: $header-color-secondary;
+  color: $header-color-primary;
+}
+.WikiNavV2 .nav-item > a:hover {
+  background: $header-color-primary;
+  color: $header-color-secondary;
+}
+.WikiNavV2 .nav-item:hover > a, .WikiNavV2 .nav-item.active > a {
+  background: $header-color-primary;
+  color: $header-color-secondary;
+}
+.WikiNavV2 .nav-item .submenu {
+  background: $header-color-primary;
+  color: $header-color-secondary;
+}
+.WikiNavV2 .nav-item .submenu .subnav-2a {
+  border-bottom: 1px solid $header-color-secondary;
+}
+.WikiNavV2 .nav-item .submenu .subnav-2a svg polygon {
+  fill: $header-color-secondary;
+}
+.WikiNavV2 .nav-item .submenu .see-all {
+  border-top: 1px solid $header-color-secondary;
+}
+.WikiNavV2 .nav-item .submenu .see-all svg polygon {
+  fill: $header-color-secondary;
+}
+*/
