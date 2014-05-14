@@ -22,11 +22,11 @@ class InstantGlobalsModule extends ResourceLoaderModule {
 	private function getVariablesValues() {
 		$ret = [];
 
-		foreach($this->variables as $name) {
-			$value = WikiFactory::getVarValueByName($name, Wikia::COMMUNITY_WIKI_ID);
+		foreach ( $this->variables as $name ) {
+			$value = WikiFactory::getVarValueByName( $name, Wikia::COMMUNITY_WIKI_ID );
 
 			// don't emit "falsy" values
-			if (!empty($value)) {
+			if ( !empty( $value ) ) {
 				$ret[$name] = $value;
 			}
 		}
@@ -34,10 +34,10 @@ class InstantGlobalsModule extends ResourceLoaderModule {
 		return (object) $ret;
 	}
 
-	public function getScript(ResourceLoaderContext $context) {
+	public function getScript( ResourceLoaderContext $context ) {
 		$variables = $this->getVariablesValues();
 
-		return sprintf('Wikia.InstantGlobals = %s', json_encode($variables));
+		return sprintf( 'Wikia.InstantGlobals = %s', json_encode( $variables ) );
 	}
 
 	/**
